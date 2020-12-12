@@ -1,0 +1,186 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo}
+\usepackage{fullpage} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Jean N'Dah \textsc{KOUAGOU}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    %\textsc{Place and Date of Birth:} & Kotopounga, Benin | 01 Jan 1996 \\
+    \textsc{Address:}   & East Legon Hills--Santoe, Accra, Ghana \\
+    \textsc{Phone:}     & +233 200752309/+229 61950608\\
+    \textsc{email:}     & \href{mailto :nkouagou@aimsammi.org}{nkouagou@aimsammi.org}
+\end{tabular}\\
+
+%Section: Education
+\section{Education}
+\begin{tabular}{lcc}
+	\textsc{Ongoing: }Masters in Machine Intelligence, \textbf{African Institute for Mathematical Sciences (AIMS Ghana)}, Ghana\\\\
+	 \textsc{August 2019:} Postgraduate diploma in Business Management, \textbf{European School of Management and Technology}\\ \textbf{(ESMT Berlin)}, Cape Town, South Africa\\\\
+	 \textsc{June 2019:}  Master of Science (MSc) cum laude (Mathematical Sciences), \\ \textbf{University of Stellenbosch} (\textbf{African Institute for Mathematical Sciences}, Cape Town), South Africa\\\\
+ 
+ \textsc{October} 2017: First Semester of Master 1 in Pure Mathematics at the\\ \textbf{ Institute of Mathematics and Physics} (\textbf{IMSP}), Porto-Novo, Benin\\\\
+\textsc{September} 2016: Bachelor degree in \textsc{Mathematics and Applications, }\\ \normalsize\textbf{ University of Abomey-Calavi}, Calavi, Benin\\
+
+\end{tabular}\\
+
+%Section: Scholarships and additional info
+\section{Scholarships and Certificates}
+\begin{tabular}{lcc}
+\textsc{Ongoing}: \textbf{Full Bursary} for African Masters in Machine Intelligence \textbf{(AMMI)}\\\\
+12 June 2019: \textbf{Best paper award} at the inaugural AIMS Mathematical Science Conference held\\ at Muizenberg, Cape Town from 11 to 12 June 2019\\\\
+\textsc{From Aug.} 2018 to \textsc{Jun.} 2019:  \textbf{Full Bursary} for African Institute for Mathematical Sciences \textbf{(AIMS)}\\\\
+\textsc{From Oct.} 2013 to \textsc{Oct.} 2016: \textbf{National Scholarship} for excellent Students \\\\
+ \textsc{From Oct.} 2012 to \textsc{Oct.} 2016:  \textbf{Odon Valley Scholarship} for excellent Students 
+\end{tabular}\\
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Ditamari:}&Mother tongue\\
+\textsc{French:}&Native language\\
+\textsc{English:}& Fluent\\
+\end{tabular}\\
+
+\section{Computer Skills}
+\begin{tabular}{lcc}
+ Good Knowledge:\quad \textsc{Python}, \textsc{Julia}, \textsc{C++}, \textsc{C}, \textsc{SageMath}, \textsc{ Singular}, \textsc{Scilab}, Ubuntu OS, \textsc{R}, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\\\
+Intermediate Knowledge:\quad Excel, Word, PowerPoint\\
+\end{tabular}\\
+\section{Work And Experience}
+2019: Mathematics Tutor at AZ Berman High School in Tefelsig, Cape Town, from 2 February to 8 June 2019\\\\
+2017-18: Mathematics Teacher at  Djassin High School, Porto-Novo, Benin from Oct. to June \newpage
+\section{Interests and Activities}
+\textbf{Research interests}: \ Artificial Intelligence,   Numerical analysis,\ Mathematical optimization, Differential equations, Technology.\\\\
+\textbf{Hobbies}: Listening to Music, Watching Football, Travelling.\\
+
+
+%\newpage
+%\par{\centering\Large \hypertarget{grds}{Bachelor degree in  \textsc{Mathematics and Applications}}\par}\large{\centering Grades\par}\normalsize
+%\begin{center}
+%\begin{tabular}{lcc}
+%\multicolumn{1}{c}{\textsc{Exam}}&\textsc{Grade/20}&\textsc{Credit Hrs}\\ \hline
+%Linear Algebra	&12&	6\\
+%Scientific English	&13&	3\\
+%Statistical methods of data analysis	&13&	4\\
+%Electro-kinetics and Geometric Optics	&12&	6\\
+%IT environment&14&	2\\
+%Function of a real variable	&15	&6\\
+%Architecture and computer technology	&13&	6\\
+%Convergence and differential equations	&11&	6\\
+%Logic and set theory&12&6\\
+%Point mechanics and electromagnetism	&18&	6\\
+%Algebraic structures and arithmetic	&15&	6\\\\ 		
+%Algorithms and C language	&17&	6\\
+%Multi-linear algebra	&11&	6\\
+%Scientific English	&15&	2\\
+%Function of several variables	&13&	6\\
+%Mechanics of the solid&12&	6\\
+%Advanced data structure	&18&	4\\
+%		
+%Sort Algorithm and complexity	&10	&3\\
+%		
+%Vector analysis and complex analysis	&13	&6\\
+%Affine geometry &14& 4\\
+%History of Sciences &14&2\\
+%Quantum mechanics and special relativity &12.75&5\\
+%Probability and Statistics &16&5\\
+%Thermodynamics and physical optics&16&\\\\
+%Commutative algebra &12& 6\\
+%C++ language &10& 3\\
+%Introduction to stochastic modeling &12.25&2\\
+%Numerical methods &15&5\\
+%Measurement and integration &10&5\\
+%Object-oriented programming&13.75&1\\
+%Theory of graphs &16.5&4\\
+%General Topology&12&5\\
+%Partial differential equations&12&5\\
+%Geometry of curves and surfaces&12&5\\
+%Mathematical project and internship&14&6\\
+%Theory of probabilities &10&6\\
+%Numerical solutions of differential equations &11&5\\
+%Numerical simulation by Scilab&14&3\\
+%
+%		& Total&180
+%\end{tabular}
+%\end{center}
+%\bigskip
+%%\hrule
+%\bigskip
+\section{References} 
+Prof. Jeff Sanders, Academic Director at AIMS South Africa.\\
+Email: jsanders@aims.ac.za\\
+
+Dr. Phumlani Dlamini, Lecturer at the Department of Mathematics, University of Johannesburg.\\ Email: pgdlamini@uj.ac.za \\
+\end{document}
